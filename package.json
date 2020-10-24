@@ -1,0 +1,32 @@
+{
+  "name": "react-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development parcel public/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josiahjswab"
+  },
+  "homepage": "",
+  "dependencies": {
+    "autoprefixer": "^9.7.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "sass": "^1.23.3",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-react": "^7.7.4"
+  }
+}
