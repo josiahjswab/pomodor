@@ -16,6 +16,10 @@ export default function App() {
   const minutesRemaining = Math.floor(timeRemaining/60)
   const secondsRemaining = timeRemaining % 60
 
+  const stopCount = () => {
+    setTimeRemaining(0)
+  }
+
   const TimerDisplay = () => {
     let result = {};
     if(minutesRemaining < 10) {
@@ -33,11 +37,9 @@ export default function App() {
     const timerNoise = document.getElementsByClassName('audio-win')[0]
 
     if(timeRemaining <= 0) {
-      console.log('null');
       clearInterval(intervel);
       timerNoise.play()
     } else {
-      console.log('change');
       intervel = setInterval(() => {
         setTimeRemaining(timeRemaining => timeRemaining - 1)
       },1000);
@@ -49,8 +51,13 @@ export default function App() {
     <div>
       Hello Pomodoro
       <Timer/>
-      <input type={'number'} value={time} onChange={(e) => setTime(e.target.value)}></input>
+      <input 
+        type={'number'} 
+        value={time} 
+        onChange={(e) => setTime(e.target.value)}
+      />
       <button onClick={countDown}>Start</button>
+      <button onClick={stopCount}>Stop</button>
       <TimerDisplay/>
       <audio className='audio-win'>
         <source src={WinAudio} type='audio/mpeg'/>
