@@ -4,7 +4,7 @@ import WinAudio from './audio/win.mp3';
 
 export default function App() {
 
-  const [time, setTime] = useState(25);
+  const [time, setTime] = useState(15);
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -62,15 +62,25 @@ export default function App() {
     }
   }, [timeRemaining]);
 
+  let timeOptions = [];
+  for(let i = 0; i < 26; i++) {
+    timeOptions.push(<option value={i} key={i}>{i}</option>)
+  }
+
   return(
     <div>
-      Hello Pomodoro
       <Timer/>
-      <input 
+      {/* <input 
         type={'number'} 
         value={time} 
         onChange={(e) => setTime(e.target.value)}
-      />
+      /> */}
+      <select
+        value={time} 
+        onChange={(e) => setTime(e.target.value)}
+      >
+        {timeOptions}
+      </select>
       <button onClick={countDown}>Start</button>
       <button onClick={pauseCount}>II</button>
       <button onClick={stopCount}>Stop</button>
