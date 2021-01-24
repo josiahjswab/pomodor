@@ -1,0 +1,18 @@
+body {
+  color: white;
+  background-color: rgb(40, 40, 40);
+}
+
+#root {
+
+}
+
+.app-body {
+  text-align: center;
+  margin: auto;
+}
+
+.timer-display {
+  color: white;
+  font-size: 5em;
+}

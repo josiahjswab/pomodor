@@ -33,7 +33,7 @@ export default function App() {
     if(secondsRemaining < 10) {
       result.secondsRemaining = `0${secondsRemaining}`
     } else {result.secondsRemaining = secondsRemaining}
-    return <h1>{result.minutesRemaining}:{result.secondsRemaining}</h1>
+    return <h1 className='timer-display' >{result.minutesRemaining}:{result.secondsRemaining}</h1>
   }
   
   let intervel = null;
@@ -68,13 +68,13 @@ export default function App() {
   }
 
   return(
-    <div>
-      <Timer/>
+    <div className='app-body'>
       {/* <input 
         type={'number'} 
         value={time} 
         onChange={(e) => setTime(e.target.value)}
       /> */}
+      <TimerDisplay/>
       <select
         value={time} 
         onChange={(e) => setTime(e.target.value)}
@@ -84,7 +84,6 @@ export default function App() {
       <button onClick={countDown}>Start</button>
       <button onClick={pauseCount}>II</button>
       <button onClick={stopCount}>Stop</button>
-      <TimerDisplay/>
       <audio className='audio-win'>
         <source src={WinAudio} type='audio/mpeg'/>
       </audio>

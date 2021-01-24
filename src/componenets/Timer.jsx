@@ -1,9 +1,10 @@
 import React from 'react';
 
 export default function Timer(props) {
+  console.log(props.timeRemaining)
   return(
     <div>
-      Timer
+      {props.timeRemaining}
     </div>
   )
 }
