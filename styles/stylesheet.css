@@ -1,6 +1,7 @@
 body {
   color: white;
   background-color: rgb(40, 40, 40);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #root {
@@ -15,4 +16,5 @@ body {
 .timer-display {
   color: white;
   font-size: 5em;
+
 }

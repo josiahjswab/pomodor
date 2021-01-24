@@ -81,9 +81,9 @@ export default function App() {
       >
         {timeOptions}
       </select>
-      <button onClick={countDown}>Start</button>
-      <button onClick={pauseCount}>II</button>
-      <button onClick={stopCount}>Stop</button>
+      <button onClick={countDown}>🏁</button>
+      <button onClick={pauseCount}>⏸</button>
+      <button onClick={stopCount}>🛑</button>
       <audio className='audio-win'>
         <source src={WinAudio} type='audio/mpeg'/>
       </audio>
